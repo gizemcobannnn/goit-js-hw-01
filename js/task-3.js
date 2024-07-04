@@ -1,6 +1,9 @@
 let width;
 function getElementWidth(content, padding, border){
-    return width=content.match('/\d+/')+(padding.match('/\d+/'))*2+(border.match('/\d+/'))*2;
+    const contentNumber=parseFloat(content);
+    const paddingNumber=parseFloat(padding);
+    const borderNumber=parseFloat(border);
+    return contentNumber+paddingNumber*2+borderNumber*2;
 }
 
 console.log(getElementWidth("50px", "8px", "4px")); // 74
